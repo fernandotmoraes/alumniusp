@@ -12,16 +12,11 @@ class ValidaAlumniController
 {
     function validaAlumni($id)
     {
-        $response = array(
-            'status' => '200',
-            'message' => 'Cadastrado na plataforma Alumni USP'
-        );
-
         if ($this->get_idadmin($id)) {
             return response(
                 array(
                     'status' => '200',
-                    'message' => 'Cadastrado na plataforma Alumni USP'
+                    'message' => 'Pode acessar o programa Alumni USP'
                 ),
                 200
             );
@@ -31,7 +26,7 @@ class ValidaAlumniController
             return response(
                 array(
                     'status' => '200',
-                    'message' => 'Cadastrado na plataforma Alumni USP'
+                    'message' => 'Pode acessar o programa Alumni USP'
                 ),
                 200
             );
