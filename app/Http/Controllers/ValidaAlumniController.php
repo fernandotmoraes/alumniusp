@@ -10,7 +10,7 @@ use App\Http\Controllers\IDAdmin;
 
 class ValidaAlumniController
 {
-    function validaAlumni($id)
+    function validaAlumni(int $id)
     {
         if ($this->get_idadmin($id)) {
             return response(
@@ -37,7 +37,7 @@ class ValidaAlumniController
                 'status' => '404',
                 'message' => 'Usuário não encontrado'
             ),
-            200
+            404
         );
     }
 
